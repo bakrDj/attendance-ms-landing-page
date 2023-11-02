@@ -1,0 +1,176 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <!-- home section -->
+  <div class="bg-[#F7F7FE] h-[900px]">
+    <!-- container -->
+    <div class="max-w-7xl mx-auto">
+      <!-- header -->
+      <div class="py-5">
+        <div class="flex justify-between items-center">
+          <img src="./logo.png" width="106" />
+          <nav class="flex justify-center items-center gap-4 text-lg text-zinc-500">
+            <a href="#">
+              <div class="text-violet-500 py-2 border-b-2 border-violet-500">الرئيسية</div>
+            </a>
+            <a href="#">
+              <div>المميزات</div>
+            </a>
+            <a href="#">
+              <div>من نحن</div>
+            </a>
+            <a href="#">
+              <div>تواصل معنا</div>
+            </a>
+          </nav>
+          <nav class="flex justify-center items-center gap-4 text-lg text-zinc-500">
+            <div>تسجيل الدخول</div>
+            <a href="#">
+              <div class="text-violet-500 py-2 border-b-2 border-violet-500">تسجيل</div>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <!-- hero -->
+      <main class="pt-40">
+        <div class="flex flex-col justify-center items-center gap-9">
+          <!-- text -->
+          <div class="flex flex-col justify-center items-center gap-3 text-center">
+            <div class="text-5xl text-zinc-800">أفضل منصة لإدارة الموارد البشرية</div>
+            <div class="text-3xl text-zinc-500">
+              قم بتجربة نظامنا بأحدث التقنيات والوسائل التي تسهل لعملائنا متابعة<br />الموظفين بكل
+              يسر وسهولة
+            </div>
+          </div>
+          <!-- CTA -->
+          <div class="flex justify-center gap-3">
+            <button class="bg-violet-200 text-violet-500 py-3 px-6 rounded-sm">عرض المزيد</button>
+            <button class="bg-violet-500 text-white py-3 px-6 rounded-sm">سجل الأن</button>
+          </div>
+        </div>
+      </main>
+      <!-- app presentation -->
+      <div class="flex justify-center items-center pt-10">
+        <img src="./app_presentation.png" />
+      </div>
+    </div>
+  </div>
+  <!-- features section -->
+  <div class="pt-[400px]">
+    <div class="max-w-7xl mx-auto flex flex-col gap-12">
+      <!-- title -->
+      <div class="flex justify-center items-center gap-3 text-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="29"
+          viewBox="0 0 29 30"
+          fill="none"
+        >
+          <circle cx="20.125" cy="8.75" r="8.25" fill="#FDBA74"></circle>
+          <circle cx="6.4375" cy="19.0626" r="5.8125" fill="#FDBA74"></circle>
+          <circle cx="19.375" cy="25.75" r="3.75" fill="#FDBA74"></circle>
+        </svg>
+        <div class="text-3xl text-zinc-800 text-center">من مميزاتنا</div>
+      </div>
+      <!-- features cards -->
+      <div class="flex gap-8 justify-center">
+        <!-- card 1 (active) -->
+        <div
+          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-violet-500 text-white py-11 px-7"
+        >
+          <div>
+            <div
+              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-400 outline outline-[6px] outline-[#F5F3FF1A]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+              >
+                <path
+                  d="M15.1665 3.75C18.0863 6.33322 21.8971 7.67821 25.7915 7.5C26.3585 9.42877 26.532 11.4518 26.3017 13.449C26.0714 15.4461 25.4419 17.3766 24.4508 19.1257C23.4597 20.8747 22.127 22.4067 20.5321 23.6306C18.9372 24.8545 17.1125 25.7452 15.1665 26.25C13.2206 25.7452 11.3959 24.8545 9.80097 23.6306C8.20605 22.4067 6.87343 20.8747 5.88229 19.1257C4.89114 17.3766 4.26171 15.4461 4.03139 13.449C3.80106 11.4518 3.97455 9.42877 4.54154 7.5C8.43595 7.67821 12.2468 6.33322 15.1665 3.75"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-xl">ميزة رقم 1</div>
+          <div class="text-[15px] text-center leading-[150%] text-violet-50">
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
+            سواء كانت تصاميم <br />مطبوعه .
+          </div>
+        </div>
+        <!-- card 2 (active) -->
+        <div
+          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow"
+        >
+          <div>
+            <div
+              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+              >
+                <path
+                  d="M15.1665 3.75C18.0863 6.33322 21.8971 7.67821 25.7915 7.5C26.3585 9.42877 26.532 11.4518 26.3017 13.449C26.0714 15.4461 25.4419 17.3766 24.4508 19.1257C23.4597 20.8747 22.127 22.4067 20.5321 23.6306C18.9372 24.8545 17.1125 25.7452 15.1665 26.25C13.2206 25.7452 11.3959 24.8545 9.80097 23.6306C8.20605 22.4067 6.87343 20.8747 5.88229 19.1257C4.89114 17.3766 4.26171 15.4461 4.03139 13.449C3.80106 11.4518 3.97455 9.42877 4.54154 7.5C8.43595 7.67821 12.2468 6.33322 15.1665 3.75"
+                  stroke="#8B5CF6"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-xl">ميزة رقم 2</div>
+          <div class="text-[15px] text-center leading-[150%] text-zinc-500">
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
+            سواء كانت تصاميم <br />مطبوعه .
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div
+          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow"
+        >
+          <div>
+            <div
+              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+              >
+                <path
+                  d="M15.1665 3.75C18.0863 6.33322 21.8971 7.67821 25.7915 7.5C26.3585 9.42877 26.532 11.4518 26.3017 13.449C26.0714 15.4461 25.4419 17.3766 24.4508 19.1257C23.4597 20.8747 22.127 22.4067 20.5321 23.6306C18.9372 24.8545 17.1125 25.7452 15.1665 26.25C13.2206 25.7452 11.3959 24.8545 9.80097 23.6306C8.20605 22.4067 6.87343 20.8747 5.88229 19.1257C4.89114 17.3766 4.26171 15.4461 4.03139 13.449C3.80106 11.4518 3.97455 9.42877 4.54154 7.5C8.43595 7.67821 12.2468 6.33322 15.1665 3.75"
+                  stroke="#8B5CF6"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-xl">ميزة رقم 3</div>
+          <div class="text-[15px] text-center leading-[150%] text-zinc-500">
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
+            سواء كانت تصاميم <br />مطبوعه .
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dummy height -->
+  <div class="h-[500px]"></div>
+</Layout>
