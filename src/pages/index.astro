@@ -5,13 +5,40 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Welcome to Astro.">
   <!-- home section -->
-  <div class="bg-[#F7F7FE] h-[900px]">
+
+  <div class="relative bg-[#F1F1FD] h-[900px]">
+    <!-- background motion cubes -->
+    <div class="motion_1 absolute z-50 top-[140px] left-[140px] rotate-45 w-[28px] h-[28px] bg-transparent border-[2px] border-teal-400 rounded-md"></div>
+    <div class="motion_2 absolute z-50 top-[280px] left-[260px] rotate-45 w-[24px] h-[24px] bg-amber-400 border-[2px] border-amber-400 rounded-full"></div>
+    <svg
+      class="motion_3 absolute z-50 top-[480px] left-[60px] rotate-[0deg]"
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="27"
+      viewBox="0 0 28 25"
+      fill="none"
+    >
+      <path
+        d="M10.5359 2.00001C12.0755 -0.666661 15.9245 -0.666667 17.4641 2L26.9904 18.5C28.53 21.1667 26.6055 24.5 23.5263 24.5H4.47373C1.39453 24.5 -0.529982 21.1667 1.00962 18.5L10.5359 2.00001Z"
+        fill="#E879F9"
+      ></path>
+    </svg>
+    <!-- ------------- -->
+    <div class="motion_2 absolute z-50 top-[180px] right-[140px] rotate-90 w-[30px] h-[30px] bg-rose-400 border-[2px] border-rose-400 rounded-md"></div>
+    <div class="motion_3 absolute z-50 top-[380px] right-[80px] rotate-45 w-[34px] h-[34px] bg-cyan-400 border-[2px] border-cyan-400 rounded-full"></div>
+    <div class="motion_2 absolute z-50 top-[520px] right-[200px] rotate-45 w-[22px] h-[22px] bg-lime-400 border-[2px] border-lime-400 rounded-full"></div>
+
+    <!-- pattern -->
+    <div class="opacity-50 bg-[url('./pattern_1.png')] bg-repeat absolute top-0 z-0 w-full h-full"></div>
     <!-- container -->
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto relative z-10">
       <!-- header -->
       <div class="py-5">
         <div class="flex justify-between items-center">
-          <img src="./logo.png" width="106" />
+          <img
+            src="./logo.png"
+            width="106"
+          />
           <nav class="flex justify-center items-center gap-4 text-lg text-zinc-500">
             <a href="#">
               <div class="text-violet-500 py-2 border-b-2 border-violet-500">الرئيسية</div>
@@ -36,13 +63,12 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <!-- hero -->
       <main class="pt-40">
-        <div class="flex flex-col justify-center items-center gap-9">
+        <div class="hero flex flex-col justify-center items-center gap-9">
           <!-- text -->
           <div class="flex flex-col justify-center items-center gap-3 text-center">
             <div class="text-5xl text-zinc-800">أفضل منصة لإدارة الموارد البشرية</div>
             <div class="text-3xl text-zinc-500">
-              قم بتجربة نظامنا بأحدث التقنيات والوسائل التي تسهل لعملائنا متابعة<br />الموظفين بكل
-              يسر وسهولة
+              قم بتجربة نظامنا بأحدث التقنيات والوسائل التي تسهل لعملائنا متابعة<br />الموظفين بكل يسر وسهولة
             </div>
           </div>
           <!-- CTA -->
@@ -54,12 +80,15 @@ import Layout from "../layouts/Layout.astro";
       </main>
       <!-- app presentation -->
       <div class="flex justify-center items-center pt-10">
-        <img src="./app_presentation.png" />
+        <img
+          class="presentation_image"
+          src="./app_presentation.png"
+        />
       </div>
     </div>
   </div>
   <!-- features section -->
-  <div class="pt-[400px]">
+  <div class="pt-[400px] bg-white">
     <div class="max-w-7xl mx-auto flex flex-col gap-12">
       <!-- title -->
       <div class="flex justify-center items-center gap-3 text-center">
@@ -70,22 +99,33 @@ import Layout from "../layouts/Layout.astro";
           viewBox="0 0 29 30"
           fill="none"
         >
-          <circle cx="20.125" cy="8.75" r="8.25" fill="#FDBA74"></circle>
-          <circle cx="6.4375" cy="19.0626" r="5.8125" fill="#FDBA74"></circle>
-          <circle cx="19.375" cy="25.75" r="3.75" fill="#FDBA74"></circle>
+          <circle
+            cx="20.125"
+            cy="8.75"
+            r="8.25"
+            fill="#FDBA74"
+          ></circle>
+          <circle
+            cx="6.4375"
+            cy="19.0626"
+            r="5.8125"
+            fill="#FDBA74"
+          ></circle>
+          <circle
+            cx="19.375"
+            cy="25.75"
+            r="3.75"
+            fill="#FDBA74"
+          ></circle>
         </svg>
         <div class="text-3xl text-zinc-800 text-center">من مميزاتنا</div>
       </div>
       <!-- features cards -->
       <div class="flex gap-8 justify-center">
         <!-- card 1 (active) -->
-        <div
-          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-violet-500 text-white py-11 px-7"
-        >
+        <div class="feature opacity-0 flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-violet-500 text-white py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px]">
           <div>
-            <div
-              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-400 outline outline-[6px] outline-[#F5F3FF1A]"
-            >
+            <div class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-400 outline outline-[6px] outline-[#F5F3FF1A]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -98,24 +138,22 @@ import Layout from "../layouts/Layout.astro";
                   stroke="white"
                   stroke-width="3"
                   stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </div>
           </div>
           <div class="text-xl">ميزة رقم 1</div>
           <div class="text-[15px] text-center leading-[150%] text-violet-50">
-            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
-            سواء كانت تصاميم <br />مطبوعه .
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
           </div>
         </div>
         <!-- card 2 (active) -->
         <div
-          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow"
+          class="feature opacity-0 translate-[32px] flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px]"
         >
           <div>
-            <div
-              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]"
-            >
+            <div class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -128,24 +166,22 @@ import Layout from "../layouts/Layout.astro";
                   stroke="#8B5CF6"
                   stroke-width="3"
                   stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </div>
           </div>
           <div class="text-xl">ميزة رقم 2</div>
           <div class="text-[15px] text-center leading-[150%] text-zinc-500">
-            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
-            سواء كانت تصاميم <br />مطبوعه .
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
           </div>
         </div>
         <!-- card 3 -->
         <div
-          class="flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow"
+          class="feature opacity-0 translate-[32px] flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px]"
         >
           <div>
-            <div
-              class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]"
-            >
+            <div class="rounded-full w-[62px] h-[62px] flex justify-center items-center bg-violet-200 outline outline-[6px] outline-[#F5F3FF]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="31"
@@ -158,19 +194,720 @@ import Layout from "../layouts/Layout.astro";
                   stroke="#8B5CF6"
                   stroke-width="3"
                   stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  stroke-linejoin="round"
+                ></path>
               </svg>
             </div>
           </div>
           <div class="text-xl">ميزة رقم 3</div>
           <div class="text-[15px] text-center leading-[150%] text-zinc-500">
-            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم
-            سواء كانت تصاميم <br />مطبوعه .
+            نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- who we are section -->
+  <div class="w-full pt-20 bg-white"></div>
+  <div class="relative overflow-hidden bg-white">
+    <!-- top waves -->
+    <div class="relative top-0 z-20 overflow-hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1536"
+        height="229"
+        viewBox="0 0 1536 229"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 131.322L43 127.075C85 122.828 171 114.865 256 90.4457C341 66.0261 427 25.15 512 8.69333C597 -7.76331 683 0.730442 768 20.9031C853 41.6066 939 73.989 1024 86.1988C1109 98.4086 1195 90.4457 1280 81.9519C1365 73.989 1451 66.0261 1493 61.7793L1536 57.5324V229H1493C1451 229 1365 229 1280 229C1195 229 1109 229 1024 229C939 229 853 229 768 229C683 229 597 229 512 229C427 229 341 229 256 229C171 229 85 229 43 229H0V131.322Z"
+          fill="#F7F7FE"
+        ></path>
+      </svg>
+      <div class="absolute top-8 -z-10">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="1536"
+          height="211"
+          viewBox="0 0 1536 211"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 10.839L64 27.4589C128 44.8014 256 78.0411 384 83.0993C512 88.8801 640 66.4795 768 44.8014C896 22.4007 1024 0 1152 0C1280 0 1408 22.4007 1472 33.2397L1536 44.8014V211H1472C1408 211 1280 211 1152 211C1024 211 896 211 768 211C640 211 512 211 384 211C256 211 128 211 64 211H0V10.839Z"
+            fill="#EDE9FE"
+          ></path>
+        </svg>
+      </div>
+    </div>
+    <!-- content -->
+    <div class="bg-[#F7F7FE]">
+      <div class="max-w-7xl mx-auto flex flex-col gap-12">
+        <!-- title -->
+        <div class="flex justify-center items-center gap-3 text-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="29"
+            viewBox="0 0 29 30"
+            fill="none"
+          >
+            <circle
+              cx="20.125"
+              cy="8.75"
+              r="8.25"
+              fill="#FDBA74"
+            ></circle>
+            <circle
+              cx="6.4375"
+              cy="19.0626"
+              r="5.8125"
+              fill="#FDBA74"
+            ></circle>
+            <circle
+              cx="19.375"
+              cy="25.75"
+              r="3.75"
+              fill="#FDBA74"
+            ></circle>
+          </svg>
+          <div class="text-3xl text-zinc-800 text-center">من نحن</div>
+        </div>
+        <!-- features cards -->
+        <div class="whoweare flex gap-8 justify-center">
+          <!-- left side -->
+          <div class="whoweare_left opacity-0 flex flex-col justify-center gap-9 flex-1 min-h-max">
+            <div class="text-2xl text-zinc-500">
+              <b>اكتشف معنا</b> افضل صفحة هبوط في العالم الان وحالا العالم صفحة هبوط.
+            </div>
+            <div class="text-lg text-zinc-500">
+              نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه .
+            </div>
+          </div>
+          <!-- right side -->
+          <div class="whoweare_right opacity-0 flex flex-1">
+            <div class="w-[460px] h-[512px] border-[8px] rounded-[56px] rounded-bl-none border-[#E3CDFF] overflow-hidden">
+              <!-- <div class="w-full h-full bg-[./person.png]"></div> -->
+              <img
+                src="./person.png"
+                width="100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bottom waves -->
+    <div class="relative top-0 z-20 overflow-hidden scale-y-[-1] scale-x-[-1]">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1536"
+        height="229"
+        viewBox="0 0 1536 229"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 131.322L43 127.075C85 122.828 171 114.865 256 90.4457C341 66.0261 427 25.15 512 8.69333C597 -7.76331 683 0.730442 768 20.9031C853 41.6066 939 73.989 1024 86.1988C1109 98.4086 1195 90.4457 1280 81.9519C1365 73.989 1451 66.0261 1493 61.7793L1536 57.5324V229H1493C1451 229 1365 229 1280 229C1195 229 1109 229 1024 229C939 229 853 229 768 229C683 229 597 229 512 229C427 229 341 229 256 229C171 229 85 229 43 229H0V131.322Z"
+          fill="#F7F7FE"
+        ></path>
+      </svg>
+    </div>
+  </div>
+  <!-- plans section -->
+  <div class="pt-[96px] bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col gap-12">
+      <!-- title -->
+      <div class="flex justify-center items-center gap-3 text-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="29"
+          viewBox="0 0 29 30"
+          fill="none"
+        >
+          <circle
+            cx="20.125"
+            cy="8.75"
+            r="8.25"
+            fill="#FDBA74"
+          ></circle>
+          <circle
+            cx="6.4375"
+            cy="19.0626"
+            r="5.8125"
+            fill="#FDBA74"
+          ></circle>
+          <circle
+            cx="19.375"
+            cy="25.75"
+            r="3.75"
+            fill="#FDBA74"
+          ></circle>
+        </svg>
+        <div class="text-3xl text-zinc-800 text-center">إختر الخطة المناسبة</div>
+      </div>
+      <!-- features cards -->
+      <div class="plan flex gap-8 justify-center">
+        <!-- plan 1-->
+        <div class="plan_1 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
+          <div class="flex flex-col justify-center items-center gap-2 px-7">
+            <div class="text-2xl">الخطة 1</div>
+            <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+          </div>
+          <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
+          <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                  stroke="#22C55E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+            <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M15.6665 5L5.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M5.6665 5L15.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center">
+            <button class="bg-transparent text-violet-500 py-2 px-6 border border-violet-500 rounded-sm text-lg">إشتري الأن</button>
+          </div>
+          <!-- waves -->
+          <div class="relative top-0 z-20 overflow-hidden">
+            <!-- sharp bg -->
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              viewBox="0 0 379 78"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M-7.3335 0L9.29975 9C25.933 19 58.1599 38 91.4264 44C123.653 49 156.92 42 189.147 34C222.413 26 254.64 19 287.907 26C321.173 34 353.4 57 370.033 68L386.667 80V91H370.033C353.4 91 321.173 91 287.907 91C254.64 91 222.413 91 189.147 91C156.92 91 123.653 91 91.4264 91C58.1599 91 25.933 91 9.29975 91H-7.3335V0Z"
+                fill="#EDE9FE"
+              ></path>
+            </svg>
+
+            <div class="w-full absolute top-0 z-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                viewBox="0 0 379 90"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.166504 0H16.1665C32.1665 0 63.1665 0 95.1665 14C126.167 27 158.167 54 189.167 63C221.167 73 252.167 65 284.167 57C316.167 50 347.167 42 363.167 38L379.167 35V103H363.167C347.167 103 316.167 103 284.167 103C252.167 103 221.167 103 189.167 103C158.167 103 126.167 103 95.1665 103C63.1665 103 32.1665 103 16.1665 103H0.166504V0Z"
+                  fill="#F5F3FF"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- plan 2 (active) -->
+        <div class="plan_2 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
+          <div class="flex flex-col justify-center items-center gap-2 px-7">
+            <div class="text-2xl">الخطة 1</div>
+            <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+          </div>
+          <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
+          <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                  stroke="#22C55E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+            <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M15.6665 5L5.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M5.6665 5L15.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center">
+            <button class="bg-violet-500 text-white py-2 px-6 border border-violet-500 rounded-sm text-lg">إشتري الأن</button>
+          </div>
+          <!-- waves -->
+          <div class="relative top-0 z-20 overflow-hidden">
+            <!-- sharp bg -->
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="relative top-3"
+              width="100%"
+              viewBox="0 0 379 78"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M-7.3335 0L9.29975 9C25.933 19 58.1599 38 91.4264 44C123.653 49 156.92 42 189.147 34C222.413 26 254.64 19 287.907 26C321.173 34 353.4 57 370.033 68L386.667 80V91H370.033C353.4 91 321.173 91 287.907 91C254.64 91 222.413 91 189.147 91C156.92 91 123.653 91 91.4264 91C58.1599 91 25.933 91 9.29975 91H-7.3335V0Z"
+                fill="#EDE9FE"
+              ></path>
+            </svg>
+
+            <div class="w-full absolute top-2 z-10 scale-x-[1]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                viewBox="0 0 379 90"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.166504 0H16.1665C32.1665 0 63.1665 0 95.1665 14C126.167 27 158.167 54 189.167 63C221.167 73 252.167 65 284.167 57C316.167 50 347.167 42 363.167 38L379.167 35V103H363.167C347.167 103 316.167 103 284.167 103C252.167 103 221.167 103 189.167 103C158.167 103 126.167 103 95.1665 103C63.1665 103 32.1665 103 16.1665 103H0.166504V0Z"
+                  fill="#F5F3FF"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- plan 3 -->
+        <div class="plan_3 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
+          <div class="flex flex-col justify-center items-center gap-2 px-7">
+            <div class="text-2xl">الخطة 1</div>
+            <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+          </div>
+          <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
+          <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                  stroke="#22C55E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+            <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M15.6665 5L5.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M5.6665 5L15.6665 15"
+                  stroke="#EF4444"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <div class="text-[18px]">ميزة رقم 1</div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center">
+            <button class="bg-transparent text-violet-500 py-2 px-6 border border-violet-500 rounded-sm text-lg">إشتري الأن</button>
+          </div>
+          <!-- waves -->
+          <div class="relative top-0 z-20 overflow-hidden">
+            <!-- sharp bg -->
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              viewBox="0 0 379 78"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M-7.3335 0L9.29975 9C25.933 19 58.1599 38 91.4264 44C123.653 49 156.92 42 189.147 34C222.413 26 254.64 19 287.907 26C321.173 34 353.4 57 370.033 68L386.667 80V91H370.033C353.4 91 321.173 91 287.907 91C254.64 91 222.413 91 189.147 91C156.92 91 123.653 91 91.4264 91C58.1599 91 25.933 91 9.29975 91H-7.3335V0Z"
+                fill="#EDE9FE"
+              ></path>
+            </svg>
+
+            <div class="w-full absolute top-0 z-10">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                viewBox="0 0 379 90"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M0.166504 0H16.1665C32.1665 0 63.1665 0 95.1665 14C126.167 27 158.167 54 189.167 63C221.167 73 252.167 65 284.167 57C316.167 50 347.167 42 363.167 38L379.167 35V103H363.167C347.167 103 316.167 103 284.167 103C252.167 103 221.167 103 189.167 103C158.167 103 126.167 103 95.1665 103C63.1665 103 32.1665 103 16.1665 103H0.166504V0Z"
+                  fill="#F5F3FF"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CTA 2 -->
+  <div class="pt-[96px] bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative overflow-hidden w-full h-[396px] bg-violet-500 shadow-[rgba(13,_38,_76,_0.19)_0px_2px_10px] text-white">
+        <div class="w-full h-full flex justify-between items-center px-[156px]">
+          <div class="text-2xl leading-[150%]">
+            نموذج افتراضي يوضع <b>في التصاميم</b> لتعرض على العميل ليتصور طريقه<br /> وضع النصوص بالتصاميم سواء.
+          </div>
+          <button class="bg-white text-violet-500 py-3 px-6 border border-violet-500 rounded-sm text-lg">إنضم إلينا الأن</button>
+        </div>
+        <!-- background motion cubes -->
+        <div class="motion_1 absolute -top-[80px] -left-6 opacity-20 rotate-45 w-[260px] h-[260px] bg-violet-50 rounded-md"></div>
+        <div class="motion_1 cube absolute top-[120px] right-28 opacity-20 -rotate-12 w-[80px] h-[80px] bg-violet-50 rounded-md"></div>
+        <div class="motion_2 absolute top-[260px] right-[320px] opacity-20 rotate-[-30deg] w-[56px] h-[56px] bg-violet-50 rounded-md"></div>
+        <div class="motion_3 absolute bottom-[-130px] right-[80px] opacity-20 w-[172px] h-[172px] rotate-[-30deg] bg-violet-50 rounded-md"></div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full pb-[96px] bg-white"></div>
+
+  <!-- footer -->
+  <div class="h-[465px]">
+    <div class="w-full bg-[#1E293B] fixed bottom-0 left-0 -z-10">
+      <!-- pattern -->
+      <div class="opacity-20 bg-[url('./pattern_2.png')] bg-repeat absolute w-full h-full scale-x-[-1]"></div>
+
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center text-white pt-[100px]">
+          <div class="flex-1 flex flex-col gap-4">
+            <img
+              src="./logo-2.png"
+              width="138px"
+              alt="logo"
+            />
+            <div class="text-[18px] font-normal">
+              نموذج افتراضي يوضع في التصاميم لتعرض على <br />العميل ليتصور طريقه وضع النصوص بالتصاميم سواء <br />كانت تصاميم مطبوعه.
+            </div>
+            <!-- social media icons -->
+            <div class="flex gap-4 mt-1">
+              <div class="flex flex-col gap-1 justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                >
+                  <path
+                    d="M7.5835 10.8333V15.1667H10.8335V22.75H15.1668V15.1667H18.4168L19.5002 10.8333H15.1668V8.66667C15.1668 8.37935 15.281 8.1038 15.4841 7.90063C15.6873 7.69747 15.9628 7.58333 16.2502 7.58333H19.5002V3.25H16.2502C14.8136 3.25 13.4358 3.82068 12.42 4.8365C11.4042 5.85233 10.8335 7.23008 10.8335 8.66667V10.8333H7.5835Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div class="w-1 h-1 rounded-[50%] bg-white invisible"></div>
+              </div>
+              <div class="flex flex-col gap-1 justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                >
+                  <path
+                    d="M17.3335 4.3335H8.66683C6.2736 4.3335 4.3335 6.2736 4.3335 8.66683V17.3335C4.3335 19.7267 6.2736 21.6668 8.66683 21.6668H17.3335C19.7267 21.6668 21.6668 19.7267 21.6668 17.3335V8.66683C21.6668 6.2736 19.7267 4.3335 17.3335 4.3335Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M13 16.25C14.7949 16.25 16.25 14.7949 16.25 13C16.25 11.2051 14.7949 9.75 13 9.75C11.2051 9.75 9.75 11.2051 9.75 13C9.75 14.7949 11.2051 16.25 13 16.25Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M17.875 8.125V8.127"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div class="w-1 h-1 rounded-[50%] bg-white invisible"></div>
+              </div>
+              <div class="flex flex-col gap-1 justify-center items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 26 26"
+                  fill="none"
+                >
+                  <path
+                    d="M23.8332 4.34418C22.7498 4.87501 21.6882 5.0906 20.5832 5.41668C19.3688 4.04626 17.5683 3.97043 15.8382 4.61826C14.1081 5.2661 12.9749 6.84993 12.9998 8.66668V9.75001C9.48442 9.83993 6.35359 8.23876 4.33317 5.41668C4.33317 5.41668 -0.19733 13.4691 8.6665 17.3333C6.6385 18.6843 4.61592 19.5953 2.1665 19.5C5.75017 21.4533 9.65559 22.1249 13.0367 21.1434C16.915 20.0168 20.1022 17.1102 21.3253 12.7563C21.6901 11.4321 21.8713 10.064 21.8637 8.69051C21.8615 8.42076 23.4995 5.68751 23.8332 4.3431V4.34418Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div class="w-1 h-1 rounded-[50%] bg-white"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col gap-4">
+            <div class="text-xl">تواصل معنا:</div>
+            <div class="flex flex-col gap-2 text-lg">
+              <div class="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="23"
+                  viewBox="0 0 22 23"
+                  fill="none"
+                >
+                  <path
+                    d="M11 15.116C13.0251 15.116 14.6667 13.4744 14.6667 11.4494C14.6667 9.42434 13.0251 7.78271 11 7.78271C8.975 7.78271 7.33337 9.42434 7.33337 11.4494C7.33337 13.4744 8.975 15.116 11 15.116Z"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M14.6667 11.4496V12.8246C14.6667 13.4324 14.9081 14.0152 15.3379 14.445C15.7676 14.8748 16.3505 15.1162 16.9583 15.1162C17.5661 15.1162 18.149 14.8748 18.5788 14.445C19.0086 14.0152 19.25 13.4324 19.25 12.8246V11.4496C19.2523 9.67683 18.6835 7.9505 17.6279 6.52633C16.5722 5.10215 15.086 4.05587 13.3892 3.54249C11.6924 3.02911 9.8754 3.07593 8.20731 3.67602C6.53923 4.2761 5.10881 5.39753 4.12794 6.87419C3.14707 8.35084 2.66793 10.1042 2.76151 11.8744C2.85508 13.6447 3.51638 15.3377 4.64746 16.7028C5.77853 18.0678 7.31921 19.0322 9.04126 19.4531C10.7633 19.874 12.5751 19.729 14.2083 19.0396"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div>:</div>
+                <div>email@gmail.com</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="23"
+                  viewBox="0 0 22 23"
+                  fill="none"
+                >
+                  <path
+                    d="M4.58333 4.11621H8.25L10.0833 8.69954L7.79167 10.0745C8.77338 12.0651 10.3844 13.6762 12.375 14.6579L13.75 12.3662L18.3333 14.1995V17.8662C18.3333 18.3524 18.1402 18.8188 17.7964 19.1626C17.4525 19.5064 16.9862 19.6995 16.5 19.6995C12.9243 19.4822 9.55181 17.9638 7.01876 15.4308C4.48571 12.8977 2.9673 9.52522 2.75 5.94954C2.75 5.46331 2.94315 4.997 3.28697 4.65318C3.63079 4.30937 4.0971 4.11621 4.58333 4.11621"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M13.75 6.86621C14.2362 6.86621 14.7025 7.05937 15.0464 7.40318C15.3902 7.747 15.5833 8.21331 15.5833 8.69954"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M13.75 3.19946C15.2087 3.19946 16.6076 3.77893 17.6391 4.81038C18.6705 5.84183 19.25 7.24077 19.25 8.69946"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div>:</div>
+                <div>(312) 4562-45-12</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="23"
+                  viewBox="0 0 22 23"
+                  fill="none"
+                >
+                  <path
+                    d="M11 13.2827C12.5188 13.2827 13.75 12.0515 13.75 10.5327C13.75 9.01393 12.5188 7.78271 11 7.78271C9.48122 7.78271 8.25 9.01393 8.25 10.5327C8.25 12.0515 9.48122 13.2827 11 13.2827Z"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M16.1855 15.7184L12.2961 19.6078C11.9524 19.9512 11.4863 20.1441 11.0004 20.1441C10.5145 20.1441 10.0485 19.9512 9.70471 19.6078L5.81438 15.7184C4.78883 14.6928 4.09044 13.3861 3.80751 11.9636C3.52458 10.541 3.66983 9.06658 4.22488 7.72661C4.77994 6.38664 5.71987 5.24135 6.92582 4.43557C8.13177 3.62979 9.54958 3.19971 11 3.19971C12.4503 3.19971 13.8682 3.62979 15.0741 4.43557C16.2801 5.24135 17.22 6.38664 17.775 7.72661C18.3301 9.06658 18.4753 10.541 18.1924 11.9636C17.9095 13.3861 17.2111 14.6928 16.1855 15.7184V15.7184Z"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div>:</div>
+                <div>Bangalore,Akshya Nagar 1st Block 1st Cross</div>
+              </div>
+              <div class="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="23"
+                  viewBox="0 0 22 23"
+                  fill="none"
+                >
+                  <path
+                    d="M9.16663 13.2827C9.46535 13.5876 9.8219 13.8298 10.2154 13.9952C10.6089 14.1605 11.0315 14.2457 11.4583 14.2457C11.8851 14.2457 12.3077 14.1605 12.7012 13.9952C13.0947 13.8298 13.4512 13.5876 13.75 13.2827L17.4166 9.61607C18.0244 9.00828 18.3659 8.18394 18.3659 7.3244C18.3659 6.46486 18.0244 5.64052 17.4166 5.03274C16.8088 4.42495 15.9845 4.0835 15.125 4.0835C14.2654 4.0835 13.4411 4.42495 12.8333 5.03274L12.375 5.49107"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M12.8334 9.61604C12.5347 9.31116 12.1781 9.06895 11.7846 8.9036C11.3911 8.73825 10.9686 8.65308 10.5417 8.65308C10.1149 8.65308 9.69235 8.73825 9.29884 8.9036C8.90534 9.06895 8.54878 9.31116 8.25006 9.61604L4.58339 13.2827C3.97561 13.8905 3.63416 14.7148 3.63416 15.5744C3.63416 16.4339 3.97561 17.2583 4.58339 17.866C5.19118 18.4738 6.01552 18.8153 6.87506 18.8153C7.7346 18.8153 8.55894 18.4738 9.16673 17.866L9.62506 17.4077"
+                    stroke="#F8FAFC"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div>:</div>
+                <div>www.website.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- copyright -->
+        <div class="h-[2px] w-full bg-white mt-[68px]"></div>
+        <div class="text-center py-4 text-[15px] text-white">جميع الحقوق محفوظة @ 2023</div>
+      </div>
+    </div>
+  </div>
+
   <!-- dummy height -->
-  <div class="h-[500px]"></div>
+  <!-- <div class="h-[500px]"></div> -->
 </Layout>
+
+<script>
+  import { animate, inView, stagger, spring } from "motion";
+
+  // rotation
+  animate(".motion_1", { rotateZ: 360 }, { duration: 20, repeat: Infinity, easing: "linear" });
+  // scale
+  animate(".motion_3", { transform: ["scale(1.3) rotateZ(-30deg)"], transformOrigin: "50% 50%" }, { duration: 3, repeat: Infinity, easing: "linear", direction: "alternate" });
+  // rotation / translation
+  animate(".motion_2", { transform: ["translateY(40px) rotateZ(-30deg)"] }, { duration: 6, repeat: Infinity, easing: "linear", direction: "alternate" });
+
+  inView(".hero", (info) => {
+    animate(info.target, { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.2, easing: spring() });
+  });
+
+  inView(".presentation_image", (info) => {
+    animate(info.target, { opacity: [0, 1], y: ["100px", "0"], rotate: ["8deg", "0deg"] }, { duration: 0.8, easing: spring({ velocity: 50, mass: 1.5 }) });
+  });
+
+  inView(
+    ".feature",
+    () => {
+      animate(".feature", { opacity: [0, 1], translate: ["-100px", 0] }, { duration: 1, delay: stagger(0.2), easing: spring({ mass: 1 }) });
+    },
+    { margin: "0px 0px -25% -25%" }
+  );
+
+  inView(
+    ".whoweare",
+    () => {
+      animate(".whoweare_right", { opacity: [0, 1], rotateZ: ["10deg", "0deg"] }, { duration: 1.5, easing: spring({ mass: 1 }) });
+      animate(".whoweare_left", { opacity: [0, 1], translate: ["-100px", 0] }, { duration: 1, delay: stagger(0.2), easing: spring({ mass: 1 }) });
+    },
+    { margin: "0px 0px -50% -50%" }
+  );
+
+  let plan1 = document.querySelector(".plan_1");
+  let plan2 = document.querySelector(".plan_2");
+  let plan3 = document.querySelector(".plan_3");
+
+  inView(
+    ".plan",
+    () => {
+      animate([plan1, plan2, plan3] as any, { opacity: [0, 1], y: [100, 0] }, { duration: 1, delay: stagger(0.6, { from: "center" }), easing: spring({ mass: 1 }) });
+    },
+    { margin: "0px 0px -50% -50%" }
+  );
+</script>
