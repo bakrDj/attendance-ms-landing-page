@@ -136,7 +136,7 @@ import Layout from "../layouts/Layout.astro";
         <div class="flex gap-8 justify-center">
           <!-- card 1 (active) -->
           <div
-            class="feature_card hover:!scale-[1.05] group is-active opacity-0 flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
+            class="feature_card hover:!scale-[1.05] group is-active opacity-0 flex justify-start items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
           >
             <div>
               <div
@@ -159,14 +159,14 @@ import Layout from "../layouts/Layout.astro";
                 </svg>
               </div>
             </div>
-            <div class="text-xl">ميزة رقم 1</div>
-            <div class="text-[15px] text-center leading-[150%] bg-zink-500 group-[.is-active]:text-violet-50">
-              نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
+            <div class="text-xl">أتمتة بشكل بسيط</div>
+            <div class="text-[16px] text-center leading-[150%] text-zinc-500 group-[.is-active]:text-violet-50">
+              يمكن لفريق الموارد البشرية الخاص بك أن يودّع مهمة تتبع الحضور يدويًا المستهلكة للوقت. يقوم نظامنا بتلقئين كامل العملية، مما يوفر الوقت الثمين ويزيل الأخطاء في سجلات الحضور.
             </div>
           </div>
           <!-- card 2 -->
           <div
-            class="feature_card hover:!scale-[1.05] group opacity-0 flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
+            class="feature_card hover:!scale-[1.05] group opacity-0 flex justify-start items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
           >
             <div>
               <div
@@ -189,14 +189,14 @@ import Layout from "../layouts/Layout.astro";
                 </svg>
               </div>
             </div>
-            <div class="text-xl">ميزة رقم 2</div>
-            <div class="text-[15px] text-center leading-[150%] bg-zink-500 group-[.is-active]:text-violet-50">
-              نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
+            <div class="text-xl">تسهيل إدارة المهام</div>
+            <div class="text-[16px] text-center leading-[150%] text-zinc-500 group-[.is-active]:text-violet-50">
+              واجهة سهلة الاستخدام تبسط عملية إدارة المهام. قم بتعيين المهام، وحدد المواعيد النهائية، وراقب التقدم بكل سهولة، كل ذلك في مركز واحد مركزي.
             </div>
           </div>
           <!-- card 3 -->
           <div
-            class="feature_card hover:!scale-[1.05] group opacity-0 flex justify-center items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
+            class="feature_card hover:!scale-[1.05] group opacity-0 flex justify-start items-center gap-6 flex-1 flex-col rounded-md bg-white text-zinc-700 py-11 px-7 shadow-[rgba(13,_38,_76,_0.10)_0px_2px_10px] transition-all"
           >
             <div>
               <div
@@ -219,9 +219,10 @@ import Layout from "../layouts/Layout.astro";
                 </svg>
               </div>
             </div>
-            <div class="text-xl">ميزة رقم 3</div>
-            <div class="text-[15px] text-center leading-[150%] bg-zink-500 group-[.is-active]:text-violet-50">
-              نموذج افتراضي يوضع في التصاميم لتعرض على العميل <br />ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم <br />مطبوعه .
+            <div class="text-xl">التقارير الفورية</div>
+            <div class="text-[16px] text-center leading-[150%] text-zinc-500 group-[.is-active]:text-violet-50">
+              ابقَ مطلعًا واتخذ قرارات مستندة إلى البيانات مع ميزة التقارير والتحليلات لدينا. أنشئ تقارير متنوعة حول أنماط الحضور، ومعدلات الغياب، وإجمالي إنتاجية القوى العاملة، مما يساعدك في تحسين
+              استراتيجيات مواردك البشرية.
             </div>
           </div>
         </div>
@@ -299,15 +300,12 @@ import Layout from "../layouts/Layout.astro";
             </svg>
             <div class="text-3xl text-zinc-800 text-center">من نحن</div>
           </div>
-          <!-- features cards -->
           <div class="whoweare flex gap-8 justify-center">
             <!-- left side -->
             <div class="whoweare_left opacity-0 flex flex-col justify-center gap-9 flex-1 min-h-max">
-              <div class="text-2xl text-zinc-500">
-                <b>اكتشف معنا</b> افضل صفحة هبوط في العالم الان وحالا العالم صفحة هبوط.
-              </div>
+              <div class="text-2xl text-zinc-500"><b>مرحبًا بك في إلتزام،</b> نظام شامل لإدارة الحضور مصمم لتسهيل عمليات الموارد البشرية.</div>
               <div class="text-lg text-zinc-500">
-                نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه .
+                نحن متحمسون لثورة الطريقة التي تدير بها الشركات الحضور. فريقنا من المحترفين المخصصين لديه خبرة واسعة في تكنولوجيا الموارد البشرية وفهم عميق للتحديات التي تواجه الشركات في إدارة الحضور.
               </div>
             </div>
             <!-- right side -->
@@ -377,16 +375,16 @@ import Layout from "../layouts/Layout.astro";
           </svg>
           <div class="text-3xl text-zinc-800 text-center">إختر الخطة المناسبة</div>
         </div>
-        <!-- features cards -->
+        <!-- plans cards -->
         <div class="plan flex gap-8 justify-center items-end">
           <!-- plan 1-->
           <div class="plan_1 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
             <div class="flex flex-col justify-center items-center gap-2 px-7">
-              <div class="text-2xl">الخطة 1</div>
-              <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+              <div class="text-2xl">الخطة الأساسية</div>
+              <div class="text-[15px] text-center leading-[150%] text-zinc-500">تتبع الحضور بسهولة وخدمة العاملين</div>
             </div>
-            <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
-            <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="text-center text-orange-400 text-2xl font-medium px-7">120ر.س / شهريا</div>
+            <div class="flex flex-col justify-center items-start gap-3 px-[68px]">
               <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -403,9 +401,27 @@ import Layout from "../layouts/Layout.astro";
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+                <div class="text-[18px]">تطبيق الجوال لتتبع الحضور</div>
               </div>
-              <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <path
+                    d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                    stroke="#22C55E"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div class="text-[18px]">بوابة خدمة الموظف</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -428,7 +444,61 @@ import Layout from "../layouts/Layout.astro";
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+                <div class="text-[18px]">تقارير وتحليلات متقدمة</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.6665 5L5.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M5.6665 5L15.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تعيين وإدارة المهام</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.6665 5L5.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M5.6665 5L15.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تكامل بيومتري لتتبع الحضور بشكل آمن</div>
               </div>
             </div>
             <div class="w-full flex justify-center">
@@ -472,11 +542,11 @@ import Layout from "../layouts/Layout.astro";
           <!-- plan 2 (active) -->
           <div class="plan_2 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
             <div class="flex flex-col justify-center items-center gap-2 px-7 pt-5">
-              <div class="text-2xl">الخطة 1</div>
-              <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+              <div class="text-2xl">الخطة القياسية</div>
+              <div class="text-[15px] text-center leading-[150%] text-zinc-500">تقارير متقدمة وإدارة المهام</div>
             </div>
-            <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
-            <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="text-center text-orange-400 text-2xl font-medium px-7">220ر.س / شهريا</div>
+            <div class="flex flex-col justify-center items-start gap-3 px-[68px]">
               <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -493,9 +563,9 @@ import Layout from "../layouts/Layout.astro";
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+                <div class="text-[18px]">تطبيق الجوال لتتبع الحضور</div>
               </div>
-              <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
@@ -504,21 +574,86 @@ import Layout from "../layouts/Layout.astro";
                   fill="none"
                 >
                   <path
-                    d="M15.6665 5L5.6665 15"
-                    stroke="#EF4444"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M5.6665 5L15.6665 15"
-                    stroke="#EF4444"
+                    d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                    stroke="#22C55E"
                     stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+                <div class="text-[18px]">بوابة خدمة الموظف</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                >
+                  <path
+                    d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                    stroke="#22C55E"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <div class="text-[18px]">تقارير وتحليلات متقدمة</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.6665 5L5.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M5.6665 5L15.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تعيين وإدارة المهام</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M15.6665 5L5.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M5.6665 5L15.6665 15"
+                      stroke="#EF4444"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تكامل بيومتري لتتبع الحضور بشكل آمن</div>
               </div>
             </div>
             <div class="w-full flex justify-center pb-5">
@@ -563,11 +698,11 @@ import Layout from "../layouts/Layout.astro";
           <!-- plan 3 -->
           <div class="plan_3 opacity-0 flex gap-10 flex-1 flex-col rounded-md bg-white text-zinc-700 pt-12 shadow-[rgba(13,_38,_76,_0.12)_0px_2px_10px]">
             <div class="flex flex-col justify-center items-center gap-2 px-7">
-              <div class="text-2xl">الخطة 1</div>
-              <div class="text-[15px] text-center leading-[150%] text-zinc-500">نموذج افتراضي يوضع في التصاميم</div>
+              <div class="text-2xl">الخطة المميزة</div>
+              <div class="text-[15px] text-center leading-[150%] text-zinc-500">تتبع الحضور بشكل آمن وإشعارات قابلة للتخصيص</div>
             </div>
             <div class="text-center text-orange-400 text-2xl font-medium px-7">320ر.س / شهريا</div>
-            <div class="flex flex-col justify-center items-start gap-3 px-24">
+            <div class="flex flex-col justify-center items-start gap-3 px-[68px]">
               <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -584,32 +719,89 @@ import Layout from "../layouts/Layout.astro";
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+                <div class="text-[18px]">تطبيق الجوال لتتبع الحضور</div>
               </div>
-              <div class="flex gap-2 items-center text-[18px] text-center leading-[150%] text-zinc-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="21"
-                  height="20"
-                  viewBox="0 0 21 20"
-                  fill="none"
-                >
-                  <path
-                    d="M15.6665 5L5.6665 15"
-                    stroke="#EF4444"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M5.6665 5L15.6665 15"
-                    stroke="#EF4444"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <div class="text-[18px]">ميزة رقم 1</div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                      stroke="#22C55E"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">بوابة خدمة الموظف</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                      stroke="#22C55E"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تقارير وتحليلات متقدمة</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="20"
+                    viewBox="0 0 21 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                      stroke="#22C55E"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="text-[18px]">تعيين وإدارة المهام</div>
+              </div>
+              <div class="flex gap-2 items-center text-[18px] text-right leading-[150%] text-zinc-500">
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21"
+                      height="20"
+                      viewBox="0 0 21 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M4.83301 9.99967L8.99967 14.1663L17.333 5.83301"
+                        stroke="#22C55E"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="text-[18px]">تكامل بيومتري لتتبع الحضور بشكل آمن</div>
               </div>
             </div>
             <div class="w-full flex justify-center">
@@ -657,11 +849,9 @@ import Layout from "../layouts/Layout.astro";
     <section class="pt-[96px] bg-white">
       <div class="max-w-7xl mx-auto">
         <div class="cta opacity-0 relative overflow-hidden w-full h-[396px] bg-violet-500 shadow-[rgba(13,_38,_76,_0.19)_0px_2px_10px] text-white">
-          <div class="w-full h-full flex justify-between items-center px-[156px]">
-            <div class="text-2xl leading-[150%]">
-              نموذج افتراضي يوضع <b>في التصاميم</b> لتعرض على العميل ليتصور طريقه<br /> وضع النصوص بالتصاميم سواء.
-            </div>
-            <button class="bg-white hover:bg-violet-50 text-violet-500 py-3 px-6 border border-violet-500 rounded-sm text-lg">إنضم إلينا الأن</button>
+          <div class="w-full h-full flex items-center px-[156px] gap-28">
+            <div class="text-2xl leading-[150%]">هل أنت جاهز لأتمتة إدارة الحضور وتعزيز كفاءة الموارد البشرية؟ <b>ابدأ مع إلتزام اليوم!</b> سهل عملياتك، ووفر الوقت، وحسِّن الإنتاجية.</div>
+            <button class="flex-shrink-0 bg-white hover:bg-violet-50 text-violet-500 py-3 px-6 border border-violet-500 rounded-sm text-lg">إنضم إلينا الأن</button>
           </div>
           <!-- background motion cubes -->
           <div class="motion_1 absolute -top-[80px] -left-6 opacity-20 rotate-45 w-[260px] h-[260px] bg-violet-50 rounded-md"></div>
